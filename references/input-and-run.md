@@ -80,3 +80,5 @@ python -X utf8 -B scripts/result_lock.py --run results_new --files all_data.csv 
 正常检查核验原文件和配置，以及已保存结果表、脚本等的哈希；程序不重算谱。仅在原文件不可用、确需离线核查已归档结果时显式使用--artifacts-only，并说明原文件未在当前环境复核。该选项仍核验结果表哈希。没有manifest的历史结果不能伪装为当前路线，按[版本规则](result-version-and-sigma-tau.md)在新目录另建历史快照。
 
 运行scripts/verify_numerics.py检查单位、原值保真、主窗口选择、频率缺口、筛查、跟踪、缺列拒绝、旧配置拒绝、结果锁定与原文件保护；元数据用skill-creator的quick_validate.py验证。实测回归核对ε值逐点不变、派生结果与此前同路线一致。
+
+已确认 σ、τ 后的乘积主图或两栏图使用独立入口 `scripts/plot_sigma_tau.py`，见[σTτ 绘图运行说明](sigma-tau-plotting.md)。`scripts/verify_sigma_tau.py`验证版本混用拒绝、公式核对、缺失保留、状态分组、参考温度缺失和输出保护。此更新不改变既有原始谱分析引擎及其计算默认值。

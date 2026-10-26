@@ -1,4 +1,4 @@
 interface:
   display_name: "BDS 介电谱分析"
-  short_description: "直接使用文件介电实部与损耗，分析导数峰、导电候选和温度演化，保留原始数据"
-  default_prompt: "使用 $bds-dielectric-analysis 直接将文件εr′、εr″作为ε′、ε″，绘制介电谱、电导率和导数谱，标出候选峰与导电区并跟踪温度演化，结果另存并保留原始数据。"
+  short_description: "分析介电谱、导数峰和导电候选，按已确认取值绘制σTτ–τ图并输出Origin绘图数据"
+  default_prompt: "使用 $bds-dielectric-analysis 分析直接导出的介电谱，或按我指定版本的σ和τ取值绘制σTτ–τ图，保留取值证据、原始数据和之前结果；需要Origin时生成可编辑项目。"
